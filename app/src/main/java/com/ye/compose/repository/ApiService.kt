@@ -16,5 +16,5 @@ interface ApiService {
     @POST("/login")
     fun login(@Body user: User):Call<Status>
     @POST
-    fun Planning(@Body planningData: PlanningData):Call<List<SlightVo>>
+    fun planning(@Body planningData: PlanningData):Call<List<SlightVo>>
 }

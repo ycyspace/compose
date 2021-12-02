@@ -40,7 +40,7 @@ class DataRepository {
         }
         suspend fun planning(planningData: PlanningData):List<SlightVo>{
             return withContext(Dispatchers.IO){
-                apiService.Planning(planningData).await()
+                apiService.planning(planningData).await()
             }
         }
 
