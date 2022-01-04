@@ -10,11 +10,11 @@ import retrofit2.http.*
 
 interface ApiService {
     @GET("/profile")
-    fun getUser(@Query("phone_number") phone_number: String): Call<User>
+    suspend fun getUser(@Query("phone_number") phone_number: String): User
     @POST("/regist")
-    fun addUser(@Body user: User):Call<Status>
+    suspend fun addUser(@Body user: User):Status
     @POST("/login")
-    fun login(@Body user: User):Call<Status>
-    @POST
-    fun planning(@Body planningData: PlanningData):Call<List<SlightVo>>
+    suspend fun login(@Body user: User):Status
+    @POST("/getPlan")
+    suspend fun planning(@Body planningData: PlanningData):List<SlightVo>
 }

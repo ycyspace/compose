@@ -17,13 +17,13 @@ class DataRepository {
         private val error = Status("连接超时，请检查网络", 5)
         suspend fun getUser(phone_number: String): User {
             return withContext(Dispatchers.IO) {
-                apiService.getUser(phone_number).await()
+                apiService.getUser(phone_number)
             }
         }
         suspend fun addUser(user: User): Status {
             return withContext(Dispatchers.IO) {
                 try {
-                    apiService.addUser(user).await()
+                    apiService.addUser(user)
                 } catch (e: Exception) {
                     error
                 }
@@ -32,17 +32,21 @@ class DataRepository {
         suspend fun login(user: User): Status {
             return withContext(Dispatchers.IO) {
                 try {
-                    apiService.login(user).await()
+                    apiService.login(user)
                 } catch (e: Exception) {
                     error
                 }
             }
         }
-        suspend fun planning(planningData: PlanningData):List<SlightVo>{
+        suspend fun getPlan(planningData: PlanningData):Any{
             return withContext(Dispatchers.IO){
-                apiService.planning(planningData).await()
+                try {
+                    apiService.planning(planningData)
+                }catch (e:Exception){
+                    error
+                }
+
             }
         }
-
     }
 }

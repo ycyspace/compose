@@ -2,13 +2,12 @@ package com.ye.compose
 
 import Feed
 import Profile
-import android.app.Activity
-import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.background
+import androidx.compose.animation.*
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
@@ -17,39 +16,35 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.navigation.animation.AnimatedNavHost
+import com.google.accompanist.navigation.animation.composable
+import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.ye.compose.ui.AppViewModel
+import com.ye.compose.ui.profile.editProfile
 import login
-import kotlin.system.exitProcess
 
 
+@ExperimentalComposeUiApi
+@ExperimentalFoundationApi
+@ExperimentalAnimationApi
 @ExperimentalMaterialApi
 @ExperimentalMaterial3Api
 @Composable
 fun start(appViewModel: AppViewModel){
-    val mainNavController = rememberNavController()
-    NavHost(navController = mainNavController, startDestination = "home" ){
-        composable("home"){home(appViewModel,mainNavController)}
-        composable("login"){login(mainNavController, appViewModel)}
-    }
-}
-@ExperimentalMaterial3Api
-@ExperimentalMaterialApi
-@Composable
-fun home(appViewModel: AppViewModel,mainNavController: NavController) {
+    appViewModel.getLatAndLng()
+    appViewModel.initUser()
+    val mainNavController =  rememberAnimatedNavController()
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = isSystemInDarkTheme()
     SideEffect {
@@ -58,7 +53,33 @@ fun home(appViewModel: AppViewModel,mainNavController: NavController) {
             darkIcons = !useDarkIcons
         )
     }
-    val bottomNavController = rememberNavController()
+    AnimatedNavHost(navController = mainNavController, startDestination = "home"){
+                composable("home",){home(appViewModel,mainNavController)}
+                composable(
+                    route="login",
+                    enterTransition = {
+                        slideInVertically(
+                        initialOffsetY = { fullHeight: Int -> fullHeight })
+                    },
+                    exitTransition = { slideOutVertically(targetOffsetY = { fullHeight: Int -> fullHeight }) },
+                    popExitTransition = {slideOutVertically(targetOffsetY = { fullHeight: Int -> fullHeight })}
+                ) {login(mainNavController, appViewModel)}
+                composable(
+                    "editProfile",
+                    enterTransition = { slideInHorizontally { fullWidth :Int->fullWidth  }},
+                    exitTransition = { slideOutHorizontally {  fullWidth: Int ->fullWidth  }},
+                    popExitTransition = { slideOutHorizontally {  fullWidth: Int ->fullWidth  }}
+                ){ editProfile(mainNavController = mainNavController, appViewModel = appViewModel)}
+
+    }
+}
+@ExperimentalFoundationApi
+@ExperimentalAnimationApi
+@ExperimentalMaterial3Api
+@ExperimentalMaterialApi
+@Composable
+fun home(appViewModel: AppViewModel,mainNavController: NavController) {
+    val bottomNavController = rememberAnimatedNavController()
     var title by remember { mutableStateOf("首页") }
         Scaffold(
             topBar = {
@@ -94,7 +115,7 @@ fun home(appViewModel: AppViewModel,mainNavController: NavController) {
                     }
                 }
             }
-        ) { innerPadding -> NavHost(bottomNavController, startDestination = Screen.Feed.route, Modifier.padding(innerPadding)
+        ) { innerPadding -> AnimatedNavHost(bottomNavController, startDestination = Screen.Feed.route, Modifier.padding(innerPadding)
         ) {
             composable(Screen.Profile.route) { Profile(mainNavController,appViewModel)}
             composable(Screen.Feed.route){Feed(mainNavController,appViewModel)}

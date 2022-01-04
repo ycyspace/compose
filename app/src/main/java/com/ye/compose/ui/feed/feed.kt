@@ -30,38 +30,69 @@ import androidx.lifecycle.LifecycleObserver
 import com.ye.compose.MainActivity
 import com.ye.compose.databinding.WebViewBinding
 import com.ye.compose.model.Slight
+import android.webkit.GeolocationPermissions
+
+import android.webkit.JsResult
+
+import android.webkit.WebChromeClient
+
+import android.graphics.Bitmap
+import android.view.Window
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.saveable.rememberSaveable
+import com.ye.compose.repository.MyLocationListener.*
+import com.ye.compose.repository.MyLocationListener.Companion.lat
+import com.ye.compose.repository.MyLocationListener.Companion.lng
+import com.ye.compose.repository.MyLocationListener.Companion.loadingSuccess
+import kotlinx.coroutines.delay
+
 
 @ExperimentalMaterialApi
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun Feed(navController: NavController,appViewModel: AppViewModel){
-    val contextState = LocalContext.current
     val scaffoldState = rememberBottomSheetScaffoldState()
+    var dayNum by remember { mutableStateOf(1)}
+    var city by remember { mutableStateOf("大连")}
     BottomSheetScaffold(
         sheetContent = {
             Row(modifier = Modifier.fillMaxSize(),horizontalArrangement = Arrangement.Start) {
-                    spendDayMenu(mItems = spend_days)
-                    cityMenu(mItems = cityList)
+                    dayNum=spendDayMenu(mItems = spend_days)
+                    city=cityMenu(mItems = cityList)
             }
         },
         scaffoldState = scaffoldState,
         floatingActionButton = {
             androidx.compose.material3.FloatingActionButton(
                 onClick = {
-                    // show snackbar as a suspend function
-
+                    appViewModel.planning(city = city,dayNum = dayNum,mustSlight = arrayListOf(),noSlight = arrayListOf())
                 }
             ) {
                 androidx.compose.material3.Icon(Icons.Default.Send, contentDescription = "Localized description")
             }
         },
         sheetPeekHeight = 50.dp,
-    ) {AndroidViewBindingPage()}
+
+    ) {
+        var mapShow by remember { mutableStateOf(false)}
+        LaunchedEffect(true){
+            delay(500)
+            mapShow= loadingSuccess
+        }
+            AnimatedVisibility(
+                visible = mapShow
+            ) {
+                AndroidViewBindingPage(lat = lat,lng = lng)
+            }
+        }
+
 }
 val spend_days= listOf<Int>(1,2,3,4,5,6,7,8,9,10)
 val cityList= listOf<String>("大连")
 @Composable
-fun spendDayMenu(mItems:List<Int>){
+fun spendDayMenu(mItems:List<Int>):Int{
     var expanded by remember { mutableStateOf(false) }
     var dayNum by remember { mutableStateOf(1)}
     Box() {
@@ -80,9 +111,10 @@ fun spendDayMenu(mItems:List<Int>){
             }
         }
     }
+    return dayNum
 }
 @Composable
-fun cityMenu(mItems: List<String>){
+fun cityMenu(mItems: List<String>):String{
     var expanded by remember { mutableStateOf(false) }
     var city by remember { mutableStateOf("大连")}
     Box() {
@@ -101,60 +133,24 @@ fun cityMenu(mItems: List<String>){
             }
         }
     }
-
+    return city
 }
-@Composable
-fun slightResult(){
-
-}
-//@Composable
-//fun slightMenu(mItems: MutableList<Slight>){
-//    var expanded by remember { mutableStateOf(false) }
-//    var city by remember { mutableStateOf("大连")}
-//    Box() {
-//        androidx.compose.material3.TextButton(onClick = { expanded = true }) {
-//            androidx.compose.material3.Icon(Icons.Default.Send, contentDescription = "Localized description")
-//            androidx.compose.material3.Text(text = city)
-//        }
-//        DropdownMenu(
-//            expanded = expanded,
-//            onDismissRequest = { expanded = false }
-//        ) {
-//            mItems.forEach { items->
-//                DropdownMenuItem(onClick = { city=items.name;expanded=false}) {
-//                    Text(text = items.name)
-//                }
-//            }
-//        }
-//    }
-//
-//}
-
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
-fun AndroidViewBindingPage(){
+fun AndroidViewBindingPage(lat:Double,lng:Double){
     val lifecycle= LocalLifecycleOwner.current.lifecycle
-        AndroidViewBinding(WebViewBinding::inflate){
+            AndroidViewBinding(WebViewBinding::inflate){
                 webView.settings.javaScriptEnabled = true
-                webView.loadUrl("http://192.168.31.104/getMap")
-            val observer= LifecycleEventObserver{ _,event->
-                when(event){
-                    Lifecycle.Event.ON_RESUME->{webView.onResume();Log.e(
-                        "webView",
-                        "resume"
-                    )}
-                    Lifecycle.Event.ON_PAUSE->{webView.onPause();Log.e(
-                        "webView",
-                        "pause"
-                    )}
-                    Lifecycle.Event.ON_DESTROY->{webView.destroy();Log.e(
-                        "webView",
-                        "destroy"
-                    )
-
+                webView.loadUrl("http://192.168.31.104/getMap/lat=${lat}&lng=${lng}")
+                val observer= LifecycleEventObserver{ _,event->
+                    when(event){
+                        Lifecycle.Event.ON_RESUME->webView.onResume()
+                        Lifecycle.Event.ON_PAUSE->webView.onPause()
+                        Lifecycle.Event.ON_DESTROY->webView.destroy()
                     }
                 }
-            }
-            lifecycle.addObserver(observer)
-            }
+                lifecycle.addObserver(observer)
+
+        }
+
         }

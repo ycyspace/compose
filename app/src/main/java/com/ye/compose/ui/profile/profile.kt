@@ -2,11 +2,15 @@
 
 import android.graphics.fonts.FontStyle
 import android.util.Log
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -27,6 +31,7 @@ import coil.transform.CircleCropTransformation
 import com.ye.compose.R
 import com.ye.compose.ui.AppViewModel
 
+@ExperimentalFoundationApi
 @ExperimentalMaterial3Api
 @ExperimentalMaterialApi
 @Composable
@@ -43,7 +48,8 @@ fun Profile(mainNavController: NavController,appViewModel: AppViewModel) {
             androidx.compose.material3.Surface(
                 modifier = Modifier
                     .width(350.dp)
-                    .height(100.dp),
+                    .height(110.dp)
+                    .padding(5.dp),
                 shape = RoundedCornerShape(10.dp),
                 tonalElevation = 16.dp,
                 shadowElevation = 16.dp,
@@ -67,7 +73,8 @@ fun Profile(mainNavController: NavController,appViewModel: AppViewModel) {
                     Spacer(modifier = Modifier.width(30.dp))
                     Column() {
                         androidx.compose.material3.Text(text = it.name,style = MaterialTheme.typography.bodyMedium)
-                        androidx.compose.material3.Text(text = it.province + "  " + it.city,style = MaterialTheme.typography.bodyMedium)
+                        Spacer(modifier = Modifier.height(10.dp))
+                        androidx.compose.material3.Text(text = it.province + "  " + it.city,style = MaterialTheme.typography.bodySmall)
                     }
                     Spacer(modifier = Modifier.width(40.dp),)
                     if (userIsNull) {
@@ -98,7 +105,7 @@ fun Profile(mainNavController: NavController,appViewModel: AppViewModel) {
                     } else {
                         androidx.compose.material3.TextButton(
                             onClick = {
-
+                                mainNavController.navigate("editProfile")
                             },
                             // Uses ButtonDefaults.ContentPadding by default
                             contentPadding = PaddingValues(
@@ -122,77 +129,40 @@ fun Profile(mainNavController: NavController,appViewModel: AppViewModel) {
                 }
 
             }
+            androidx.compose.material3.Surface(
+                modifier = Modifier
+                    .width(350.dp)
+                    .height(200.dp)
+                    .padding(5.dp),
+                shape = RoundedCornerShape(10.dp),
+                tonalElevation = 16.dp,
+                shadowElevation = 16.dp,
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    LazyVerticalGrid(cells = GridCells.Adaptive(minSize = 100.dp),modifier = Modifier.padding(15.dp),verticalArrangement = Arrangement.spacedBy(8.dp)){
+                        items(10) {index-> androidx.compose.material3.Text(text = "Item: $index")  }
+                    }
+                    androidx.compose.material3.TextButton(
+                        onClick = {
+                            mainNavController.navigate("editProfile")
+                        },
+                        // Uses ButtonDefaults.ContentPadding by default
+                       modifier = Modifier.fillMaxWidth()
+                    ) {
+                        // Inner content including an icon and a text label
+                        androidx.compose.material3.Icon(
+                            Icons.Filled.Edit,
+                            contentDescription = "Edit",
+                            modifier = Modifier.size(ButtonDefaults.IconSize)
+                        )
+                        Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                        androidx.compose.material3.Text("修改")
+                    }
+                }
+
+            }
         }
     }
 }
-//    val scope = rememberCoroutineScope()
-//    val selection = remember { mutableStateOf(1) }
-//    val scaffoldState = rememberBackdropScaffoldState(BackdropValue.Concealed)
-//    LaunchedEffect(scaffoldState) {
-//        scaffoldState.reveal()
-//    }
-//    BackdropScaffold(
-//        scaffoldState = scaffoldState,
-//        appBar = {
-//            TopAppBar(
-//                title = { Text("Backdrop scaffold") },
-//                navigationIcon = {
-//                    if (scaffoldState.isConcealed) {
-//                        IconButton(onClick = { scope.launch { scaffoldState.reveal() } }) {
-//                            Icon(Icons.Default.Menu, contentDescription = "Localized description")
-//                        }
-//                    } else {
-//                        IconButton(onClick = { scope.launch { scaffoldState.conceal() } }) {
-//                            Icon(Icons.Default.Close, contentDescription = "Localized description")
-//                        }
-//                    }
-//                },
-//                actions = {
-//                    var clickCount by remember { mutableStateOf(0) }
-//                    IconButton(
-//                        onClick = {
-//                            // show snackbar as a suspend function
-//                            scope.launch {
-//                                scaffoldState.snackbarHostState
-//                                    .showSnackbar("Snackbar #${++clickCount}")
-//                            }
-//                        }
-//                    ) {
-//                        Icon(Icons.Default.Favorite, contentDescription = "Localized description")
-//                    }
-//                },
-//                elevation = 0.dp,
-//                backgroundColor = Color.Transparent
-//            )
-//        },
-//        backLayerContent = {
-//            LazyColumn {
-//                items(if (selection.value >= 3) 3 else 5) {
-//                    ListItem(
-//                        Modifier.clickable {
-//                            selection.value = it
-//                            scope.launch { scaffoldState.conceal() }
-//                        },
-//                        text = { Text("Select $it") }
-//                    )
-//                }
-//            }
-//        },
-//        frontLayerContent = {
-//            Text("Selection: ${selection.value}")
-//            LazyColumn {
-//                items(50) {
-//                    ListItem(
-//                        text = { Text("Item $it") },
-//                        icon = {
-//                            Icon(
-//                                Icons.Default.Favorite,
-//                                contentDescription = "Localized description"
-//                            )
-//                        }
-//                    )
-//                }
-//            }
-//        }
-//    )
-//}
