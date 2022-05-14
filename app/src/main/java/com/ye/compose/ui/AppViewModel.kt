@@ -1,9 +1,8 @@
 package com.ye.compose.ui
 
 
+import AndroidViewBindingPage
 import android.annotation.SuppressLint
-import android.content.Context
-import android.text.Html
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -16,30 +15,26 @@ import com.ye.compose.model.User
 import com.ye.compose.repository.DataRepository
 import com.ye.compose.repository.Status
 import com.ye.compose.utils.MD5Utils.stringToMD5
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 
 import com.baidu.location.LocationClient
 import com.baidu.location.LocationClientOption
 import com.ye.compose.MyApplication.Companion.context
-import com.baidu.location.BDLocation
+import com.ye.compose.repository.LocationListener
 
-import com.baidu.location.BDAbstractLocationListener
-import com.ye.compose.repository.MyLocationListener
-import com.ye.compose.repository.MyLocationListener.*
-import com.ye.compose.repository.MyLocationListener.Companion.lat
-import com.ye.compose.repository.MyLocationListener.Companion.lng
-import kotlin.math.log
+
 
 
 class AppViewModel:ViewModel() {
+     private val TAG:String="AppViewModel"
      private val user:MutableLiveData<User> by lazy { MutableLiveData<User>()}
      private val state:MutableLiveData<Status> by lazy { MutableLiveData<Status>()}
      private val mustSlights:MutableLiveData<MutableList<Slight>> by lazy{MutableLiveData<MutableList<Slight>>()}
      private val noSlights:MutableLiveData<MutableList<Slight>> by lazy{MutableLiveData<MutableList<Slight>>()}
      private val resSlights:MutableLiveData<List<SlightVo>> by lazy { MutableLiveData<List<SlightVo>>() }
+     private val lat:MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
+     private val lng:MutableLiveData<Double> by lazy { MutableLiveData<Double>() }
      fun getUser():LiveData<User>{
          if(state.value?.status==0){
              viewModelScope.launch {
@@ -49,11 +44,20 @@ class AppViewModel:ViewModel() {
          else initUser()
          return user
      }
+    fun getLat():LiveData<Double>{
+        return lat
+    }
+    fun getLng():LiveData<Double>{
+        return lng;
+    }
     fun getState():LiveData<Status>{
         return state
     }
     fun initUser(){
         user.value= User(phone_number = "",password = "",name = "",tags = arrayListOf())
+    }
+    fun clearStatus(){
+        state.value=null
     }
      @SuppressLint("SimpleDateFormat")
      fun addUser(phone_number: String, password:String):LiveData<Status>{
@@ -80,15 +84,19 @@ class AppViewModel:ViewModel() {
         return state
     }
     fun getLatAndLng(){
-        val myLocationListener= MyLocationListener()
+        val myLocationListener= LocationListener()
         val mLocationClient = LocationClient(context)
         mLocationClient.registerLocationListener(myLocationListener)
         val option=LocationClientOption()
         option.locationMode=LocationClientOption.LocationMode.Hight_Accuracy
         option.coorType="bd09ll"
-        option.scanSpan=10000
         mLocationClient.locOption=option
         mLocationClient.start()
+        myLocationListener.setListenGps(LocationListener.GetGps { bdLocation ->
+            lat.value=bdLocation.latitude
+            lng.value=bdLocation.longitude
+            Log.d(TAG, "getLatAndLng: "+lat.value+"\n"+lng.value)
+        })
     }
     fun planning(
         dayNum:Int,
@@ -97,9 +105,9 @@ class AppViewModel:ViewModel() {
         city:String,
     ){
         val nowTime=System.currentTimeMillis()
-        val planningData= PlanningData(dayNum = dayNum,mustSlight=mustSlight,noSlight = noSlight,city = city,time = nowTime,tags = user.value!!.tags,lat = lat,lng = lng)
+        val planningData= lat.value?.let { lng.value?.let { it1 -> PlanningData(dayNum = dayNum,mustSlight=mustSlight,noSlight = noSlight,city = city,time = nowTime,tags = user.value!!.tags,lat = it,lng = it1) } }
         viewModelScope.launch {
-            val response=DataRepository.getPlan(planningData)
+            val response= planningData?.let { DataRepository.getPlan(it) }
             if(response is List<*>)
             {
                 resSlights.value=response as List<SlightVo>

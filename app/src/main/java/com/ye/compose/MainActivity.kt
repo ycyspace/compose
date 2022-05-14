@@ -33,12 +33,12 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.ui.ExperimentalComposeUiApi
 import com.baidu.location.LocationClient
-
-
+import com.ye.compose.MyApplication.Companion.appViewModel
 
 
 class MainActivity : ComponentActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
-    private val appViewModel: AppViewModel = AppViewModel()
+
+    @ExperimentalComposeUiApi
     @ExperimentalFoundationApi
     @ExperimentalAnimationApi
     @ExperimentalPermissionsApi
@@ -57,7 +57,6 @@ class MainActivity : ComponentActivity(), ActivityCompat.OnRequestPermissionsRes
             }
         }
     }
-
     @ExperimentalComposeUiApi
     @ExperimentalFoundationApi
     @ExperimentalAnimationApi

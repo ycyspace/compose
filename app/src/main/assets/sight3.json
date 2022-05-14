@@ -1,0 +1,790 @@
+[
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 18119279,
+      "relativePosition": 41,
+      "businessId": 1494118,
+      "zoneName": "西安路商圈",
+      "poiName": "大连3D错觉艺术馆",
+      "commentCount": 57,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/fd/tg/g1/M00/04/8B/CghzfFVX2yKAalUsAAHC7T6-vMw670.jpg",
+      "distanceStr": "距市中心2.3km",
+      "tagNameList": [
+        "特色展馆"
+      ],
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1494118.html?isHideNavBar=YES",
+      "displayField": "西安路商圈",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.92231,
+        "longitude": 121.594201
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 101454,
+      "relativePosition": 42,
+      "businessId": 140858,
+      "poiName": "紫云花汐薰衣草庄园",
+      "commentCount": 110,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "sightLevelStr": "4A",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/350r1e000001ey0ynAEFD.jpg",
+      "distanceStr": "距市中心50.5km",
+      "tagNameList": [
+        "亲子同乐"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/140858.html?isHideNavBar=YES",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "置身数十里香草花海"
+      ],
+      "hasVideo": true,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 39.309188,
+        "longitude": 121.923895
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 10535382,
+      "relativePosition": 43,
+      "businessId": 114392,
+      "zoneName": "大连国际机场",
+      "poiName": "鼎山公园",
+      "commentCount": 96,
+      "commentScore": 4.6,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/01A72120008hn9eal206C.jpg",
+      "distanceStr": "距市中心5.8km",
+      "tagNameList": [
+        "城市公园"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/114392.html?isHideNavBar=YES",
+      "displayField": "大连国际机场",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.958365,
+        "longitude": 121.574416
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 87749,
+      "relativePosition": 44,
+      "businessId": 64388,
+      "zoneName": "旅顺军港/新玛特/大学城",
+      "poiName": "旅顺火车站",
+      "commentCount": 207,
+      "commentScore": 4.2,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 120470,
+      "districtName": "旅顺口区",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100w1f000001gwa68A9A6.jpg",
+      "distanceStr": "距市中心33.5km",
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/120470/64388.html?isHideNavBar=YES",
+      "displayField": "旅顺军港/新玛特/大学城",
+      "priceType": "6",
+      "priceTypeDesc": "暂无报价",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "百年历史的外国风格站台"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.813584,
+        "longitude": 121.258966
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 65196086,
+      "relativePosition": 45,
+      "businessId": 5580363,
+      "zoneName": "金石滩国家旅游度假区",
+      "poiName": "大连金石滩财神岛海岛乐园",
+      "commentCount": 114,
+      "commentScore": 4.9,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/10041h000001hsgbsA45D.jpg",
+      "distanceStr": "距市中心38.5km",
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/5580363.html?isHideNavBar=YES",
+      "displayField": "金石滩国家旅游度假区",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 39.101588,
+        "longitude": 122.00072
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 22867146,
+      "relativePosition": 46,
+      "businessId": 1714646,
+      "zoneName": "西安路商圈",
+      "poiName": "有轨电车",
+      "commentCount": 281,
+      "commentScore": 4.6,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100i0700000021croFFFB.jpg",
+      "distanceStr": "距市中心2.2km",
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1714646.html?isHideNavBar=YES",
+      "displayField": "西安路商圈",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "感受一个世纪前的浪漫沧桑"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.922707,
+        "longitude": 121.595433
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 55707156,
+      "relativePosition": 47,
+      "businessId": 4746343,
+      "zoneName": "高新万达广场/软件园/学府区",
+      "poiName": "云水瑶汤泉",
+      "commentCount": 76,
+      "commentScore": 4.6,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100s1f000001gx68d1349.jpg",
+      "distanceStr": "距市中心10.8km",
+      "tagNameList": [
+        "洗浴按摩"
+      ],
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/4746343.html?isHideNavBar=YES",
+      "displayField": "高新万达广场/软件园/学府区",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "高浓度碳酸风吕"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.858012,
+        "longitude": 121.525659
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 87694,
+      "relativePosition": 48,
+      "businessId": 64269,
+      "zoneName": "星海广场/圣亚海洋世界/星海公园",
+      "poiName": "大连现代博物馆",
+      "commentCount": 239,
+      "commentScore": 4.5,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "sightLevelStr": "4A",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/fd/tg/g5/M00/3A/D6/CggYsFcMiRKAHbJkAB3ZFe5XRrc332.jpg",
+      "distanceStr": "距市中心3.8km",
+      "tagNameList": [
+        "博物馆"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/64269.html?isHideNavBar=YES",
+      "displayField": "星海广场/圣亚海洋世界/星海公园",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "解读大连百年城史"
+      ],
+      "hasVideo": true,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.894591,
+        "longitude": 121.59263
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 18355222,
+      "relativePosition": 49,
+      "businessId": 1605711,
+      "zoneName": "旅顺军港/新玛特/大学城",
+      "poiName": "旅顺潜艇博物馆",
+      "commentCount": 259,
+      "commentScore": 4.4,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "sightLevelStr": "4A",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/0106j120000wn8prkF709.jpg",
+      "distanceStr": "距市中心32.4km",
+      "tagNameList": [
+        "亲子同乐",
+        "博物馆"
+      ],
+      "otherTagList": [
+        {
+          "type": "booking",
+          "name": "预售中",
+          "code": "PreSaleBooking"
+        }
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1605711.html?isHideNavBar=YES",
+      "displayField": "旅顺军港/新玛特/大学城",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "潜艇文化主题博物馆"
+      ],
+      "sightCategoryInfo": "东北展览馆榜第12名",
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.800634,
+        "longitude": 121.279262
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 22867148,
+      "relativePosition": 50,
+      "businessId": 1714558,
+      "zoneName": "中山广场/人民路东港商务区",
+      "poiName": "15库艺术园",
+      "commentCount": 91,
+      "commentScore": 4.2,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100c070000002r0me30A2.jpg",
+      "distanceStr": "距市中心4.7km",
+      "tagNameList": [
+        "街区小镇"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1714558.html?isHideNavBar=YES",
+      "displayField": "中山广场/人民路东港商务区",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "大连文艺小资的汇集地"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.93562,
+        "longitude": 121.671982
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 31077274,
+      "relativePosition": 51,
+      "businessId": 2023822,
+      "zoneName": "金石滩国家旅游度假区",
+      "poiName": "大连鲁能海洋温泉",
+      "commentCount": 52,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100r1f000001gooco7124.jpg",
+      "distanceStr": "距市中心37.6km",
+      "tagNameList": [
+        "温泉景区"
+      ],
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/2023822.html?isHideNavBar=YES",
+      "displayField": "金石滩国家旅游度假区",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "设施齐全的精品汤泉"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 39.082354,
+        "longitude": 122.002415
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 24651139,
+      "relativePosition": 52,
+      "businessId": 1831974,
+      "zoneName": "老虎滩海洋公园",
+      "poiName": "老虎滩极地海洋动物馆",
+      "commentCount": 314,
+      "commentScore": 4.7,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100n1f000001gpcae8A04.jpg",
+      "distanceStr": "距市中心6.8km",
+      "tagNameList": [
+        "海洋馆"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1831974.html?isHideNavBar=YES",
+      "displayField": "老虎滩海洋公园",
+      "priceType": "5",
+      "priceTypeDesc": "",
+      "isFree": false,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "与极地海洋动物亲密接触"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.883469,
+        "longitude": 121.684407
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 18478411,
+      "relativePosition": 53,
+      "businessId": 1674912,
+      "zoneName": "经济技术开发区",
+      "poiName": "董家沟植物园",
+      "commentCount": 53,
+      "commentScore": 4.7,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100r1f000001gonetE168.jpg",
+      "distanceStr": "距市中心31.7km",
+      "tagNameList": [
+        "植物园"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1674912.html?isHideNavBar=YES",
+      "displayField": "经济技术开发区",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "现有600多种奇花异木"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 39.096764,
+        "longitude": 121.907919
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 75635,
+      "relativePosition": 54,
+      "businessId": 1102,
+      "zoneName": "大连火车站/青泥洼桥",
+      "poiName": "劳动公园",
+      "commentCount": 447,
+      "commentScore": 4.6,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/0103k1200085mu4mz2A34.jpg",
+      "distanceStr": "距市中心1.8km",
+      "tagNameList": [
+        "亲子同乐",
+        "城市公园"
+      ],
+      "otherTagList": [
+        {
+          "type": "booking",
+          "name": "可订今日",
+          "code": "TodayCanBook"
+        }
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1102.html?isHideNavBar=YES",
+      "displayField": "大连火车站/青泥洼桥",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "大连市区内的赏花胜地"
+      ],
+      "hasVideo": false,
+      "childrenSightList": [],
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.917424,
+        "longitude": 121.641374
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 24632724,
+      "relativePosition": 55,
+      "businessId": 1828171,
+      "zoneName": "星海广场/圣亚海洋世界/星海公园",
+      "poiName": "中山路",
+      "commentCount": 76,
+      "commentScore": 4.7,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100s0h00000092t1x4F5D.jpg",
+      "distanceStr": "距市中心5.2km",
+      "tagNameList": [
+        "街区小镇"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1828171.html?isHideNavBar=YES",
+      "displayField": "星海广场/圣亚海洋世界/星海公园",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "连接众多景点商圈的主干路"
+      ],
+      "hasVideo": true,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.887846,
+        "longitude": 121.577441
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 75638,
+      "relativePosition": 56,
+      "businessId": 1105,
+      "zoneName": "星海广场/圣亚海洋世界/星海公园",
+      "poiName": "星海公园",
+      "commentCount": 749,
+      "commentScore": 4.4,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/10031f000001gs22u6E71.jpg",
+      "distanceStr": "距市中心5.6km",
+      "tagNameList": [
+        "亲子同乐",
+        "海滨沙滩"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/1105.html?isHideNavBar=YES",
+      "displayField": "星海广场/圣亚海洋世界/星海公园",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "游乐设施丰富的海滨公园"
+      ],
+      "hasVideo": true,
+      "childrenSightList": [],
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.884692,
+        "longitude": 121.575225
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 87744,
+      "relativePosition": 57,
+      "businessId": 64352,
+      "zoneName": "旅顺军港/新玛特/大学城",
+      "poiName": "旅顺博物馆",
+      "commentCount": 238,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/10081f000001gqg7j896C.jpg",
+      "distanceStr": "距市中心34.9km",
+      "tagNameList": [
+        "博物馆"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/64352.html?isHideNavBar=YES",
+      "displayField": "旅顺军港/新玛特/大学城",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "馆藏千年新疆干尸"
+      ],
+      "hasVideo": true,
+      "childrenSightList": [],
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.814047,
+        "longitude": 121.241579
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 76863,
+      "relativePosition": 58,
+      "businessId": 6684,
+      "zoneName": "中山广场/人民路东港商务区",
+      "poiName": "中山广场",
+      "commentCount": 479,
+      "commentScore": 4.5,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100p1f000001gpfdx33DB.jpg",
+      "distanceStr": "距市中心2.7km",
+      "tagNameList": [
+        "地标观景"
+      ],
+      "poiType": 3,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/6684.html?isHideNavBar=YES",
+      "displayField": "中山广场/人民路东港商务区",
+      "priceType": "4",
+      "priceTypeDesc": "免费",
+      "isFree": true,
+      "openStatus": "",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "汇聚众多百年欧式建筑"
+      ],
+      "hasVideo": true,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.928071,
+        "longitude": 121.650462
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 10758945,
+      "relativePosition": 59,
+      "businessId": 136142,
+      "zoneName": "西郊国家森林公园",
+      "poiName": "老宝贝成园温泉",
+      "commentCount": 458,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "sightLevelStr": "4A",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/10051f000001gssho2149.jpg",
+      "distanceStr": "距市中心11.5km",
+      "tagNameList": [
+        "温泉景区"
+      ],
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/136142.html?isHideNavBar=YES",
+      "displayField": "西郊国家森林公园",
+      "price": 98,
+      "priceType": "3",
+      "priceTypeDesc": "门市价",
+      "isFree": false,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "体验远古深层温泉"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 38.936028,
+        "longitude": 121.488895
+      }
+    }
+  },
+  {
+    "showType": 1,
+    "card": {
+      "poiId": 10547741,
+      "relativePosition": 60,
+      "businessId": 141489,
+      "zoneName": "金州火车站/体育场/向应广场",
+      "poiName": "阿尔滨水上乐园",
+      "commentCount": 65,
+      "commentScore": 4.3,
+      "isAdvertisement": false,
+      "isRecommend": true,
+      "districtId": 4,
+      "districtName": "大连",
+      "coverImageUrl": "https://youimg1.c-ctrip.com/target/100h1f000001grw9h52BE.jpg",
+      "distanceStr": "距市中心21.8km",
+      "tagNameList": [
+        "亲子同乐",
+        "水乐园"
+      ],
+      "poiType": 66,
+      "detailUrl": "https://m.ctrip.com/webapp/you/sight/4/141489.html?isHideNavBar=YES",
+      "displayField": "金州火车站/体育场/向应广场",
+      "price": 69,
+      "priceType": "3",
+      "priceTypeDesc": "门市价",
+      "isFree": false,
+      "openStatus": "暂停营业",
+      "isFromFavor": false,
+      "shortFeatures": [
+        "内有热水冲浪按摩池"
+      ],
+      "hasVideo": false,
+      "isCircuml": false,
+      "coordinate": {
+        "coordinateType": "BD09",
+        "latitude": 39.103066,
+        "longitude": 121.709635
+      }
+    }
+  }
+]

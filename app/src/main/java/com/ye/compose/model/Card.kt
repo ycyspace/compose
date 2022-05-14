@@ -1,0 +1,30 @@
+package com.ye.compose.model
+
+data class Card(
+    val businessId: Int,
+    val commentCount: Int,
+    val commentScore: Double,
+    val coordinate: Coordinate,
+    val coverImageUrl: String,
+    val detailUrl: String,
+    val displayField: String,
+    val distanceStr: String,
+    val districtId: Int,
+    val districtName: String,
+    val hasVideo: Boolean,
+    val isAdvertisement: Boolean,
+    val isCircuml: Boolean,
+    val isFree: Boolean,
+    val isFromFavor: Boolean,
+    val isRecommend: Boolean,
+    val openStatus: String,
+    val poiId: Int,
+    val poiName: String,
+    val poiType: Int,
+    val priceType: String,
+    val priceTypeDesc: String,
+    val relativePosition: Int,
+    val shortFeatures: List<String>,
+    val tagNameList: List<String>,
+    val zoneName: String
+)

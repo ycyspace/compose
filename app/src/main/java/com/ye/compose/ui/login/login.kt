@@ -71,6 +71,7 @@ fun login(mainNavController: NavController,appViewModel: AppViewModel) {
                 }
             } else {
                 scaffoldState.snackbarHostState.showSnackbar(status.value!!.message)
+                appViewModel.clearStatus()
             }
             isLoading = false
         }

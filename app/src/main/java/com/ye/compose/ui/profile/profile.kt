@@ -2,10 +2,7 @@
 
 import android.graphics.fonts.FontStyle
 import android.util.Log
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ScaffoldState
@@ -23,8 +21,11 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.layout
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
@@ -141,8 +142,26 @@ fun Profile(mainNavController: NavController,appViewModel: AppViewModel) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    LazyVerticalGrid(cells = GridCells.Adaptive(minSize = 100.dp),modifier = Modifier.padding(15.dp),verticalArrangement = Arrangement.spacedBy(8.dp)){
-                        items(10) {index-> androidx.compose.material3.Text(text = "Item: $index")  }
+                    val tagList= listOf("美食","探险","动物","文化","教育","乡村","运动","休闲","刺激","朋友","亲子","情侣","单人","历史遗址","建筑物景","博物馆和美术馆","宗教",
+                        "节气时节","海滩","洞穴","悬崖","山","丘陵","岛屿","瀑布","森林","植物景观","湖泊","温泉","游船观光")
+                    LazyVerticalGrid(cells = GridCells.Adaptive(64.dp),contentPadding = PaddingValues(
+                        start = 12.dp,
+                        top = 16.dp,
+                        end = 12.dp,
+                        bottom = 16.dp
+                    )){
+                        items(10) {index->
+                            Card(
+                                backgroundColor = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier
+                                    .padding(4.dp)
+                                    .fillMaxWidth(),
+
+                            ){
+                                androidx.compose.material3.Text (text=tagList[index],fontSize = 14.sp,textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(8.dp), color = Color.White)
+                            }
+                          }
                     }
                     androidx.compose.material3.TextButton(
                         onClick = {
